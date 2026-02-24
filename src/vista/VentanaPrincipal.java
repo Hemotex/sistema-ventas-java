@@ -149,13 +149,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblVentas);
 
-        btnHistorial.setText("Mostrar Historial");
+        btnHistorial.setBackground(new java.awt.Color(153, 153, 153));
+        btnHistorial.setText("Historial");
         btnHistorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHistorialActionPerformed(evt);
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(153, 153, 153));
         jButton3.setText("Eliminar Venta");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,6 +165,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnEliminarTodas.setBackground(new java.awt.Color(255, 51, 51));
         btnEliminarTodas.setText("Eliminar Todas ");
         btnEliminarTodas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,6 +173,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnActualizar.setBackground(new java.awt.Color(153, 153, 153));
         btnActualizar.setText("Actualizar");
         btnActualizar.setToolTipText("");
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
