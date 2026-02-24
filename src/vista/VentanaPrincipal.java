@@ -100,7 +100,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        txtCantidad.setText("jTextField1");
         txtCantidad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCantidadActionPerformed(evt);
