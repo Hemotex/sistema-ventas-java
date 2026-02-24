@@ -8,7 +8,7 @@ import vista.VentanaPrincipal;
 
 public class main {
   public static void main(String[] args) {
-      System.out.println("Iniciando Sistema 2026");
+      System.out.println("Iniciando sistema PRO - version 2026");
       try {
            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                if ("Nimbus".equals(info.getName())) {
