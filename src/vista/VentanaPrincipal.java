@@ -22,6 +22,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      */
     public VentanaPrincipal() {
         initComponents();
+         setLocationRelativeTo(null);
+        setVisible(true);
+        
         tblVentas.setRowHeight(25);
         tblVentas.getTableHeader().setFont(new java.awt.Font("Segoe UI", java.awt.Font.BOLD, 14));
         tblVentas.setFont(new java.awt.Font("Segoe UI", java.awt.Font.PLAIN, 13));
