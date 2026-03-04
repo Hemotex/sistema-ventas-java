@@ -4,11 +4,11 @@
  */
 package main;
 
-import vista.VentanaPrincipal;
+import vista.LoginFrame;
 
 public class main {
   public static void main(String[] args) {
-      System.out.println("Iniciando sistema PRO - version 2026");
+      System.out.println("Sistema actualizado 2026");
       try {
            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                if ("Nimbus".equals(info.getName())) {
@@ -20,6 +20,6 @@ public class main {
         System.out.println("No se pudo aplicar Nimbus");
 }
 
-        new VentanaPrincipal().setVisible(true);
+        new LoginFrame().setVisible(true);
     }  
 }
