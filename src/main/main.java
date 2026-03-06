@@ -4,7 +4,7 @@
  */
 package main;
 
-import vista.VentanaPrincipal;
+import vista.LoginFrame;
 
 public class main {
   public static void main(String[] args) {
@@ -21,6 +21,6 @@ public class main {
         System.out.println("No se pudo aplicar Nimbus");
 }
 
-        new VentanaPrincipal().setVisible(true);
+        new LoginFrame().setVisible(true);
     }  
 }
