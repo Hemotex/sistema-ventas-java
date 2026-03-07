@@ -7,7 +7,7 @@ package vista;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import vista.VentanaAdmin;
 import dao.UsuarioDAO;
 import modelo.Usuario;
 
@@ -35,12 +35,25 @@ public class LoginFrame extends JFrame {
         Usuario usuario = usuarioDAO.autenticar(username, password);
 
         if (usuario != null) {
+
             JOptionPane.showMessageDialog(this, "Bienvenido " + usuario.getUsername());
-            new VentanaPrincipal().setVisible(true);
-            dispose(); // Cierra el login
+
+            dispose();
+
+        if (usuario.getRol().equalsIgnoreCase("ADMIN")) {
+
+            new VentanaAdmin(usuario).setVisible(true);
+
+        } else if (usuario.getRol().equalsIgnoreCase("VENDEDOR")) {
+
+            new VentanaPrincipal(usuario).setVisible(true);
+
+        }
+
         } else {
+
             JOptionPane.showMessageDialog(this, "Credenciales incorrectas");
-            System.exit(0);
+
         }
     }
     private void initComponents() {
