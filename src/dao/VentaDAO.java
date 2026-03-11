@@ -23,7 +23,7 @@ public class VentaDAO {
         return false;
     }
 
-    String sql = "INSERT INTO ventas (precio, costo, cantidad, total, ganancia, fecha) VALUES (?, ?, ?, ?, ?, ?)";
+    String sql = "INSERT INTO venta (precio, costo, cantidad, total, ganancia, fecha) VALUES (?, ?, ?, ?, ?, ?)";
 
     try {
 
@@ -45,7 +45,7 @@ public class VentaDAO {
 
 
     public double obtenerTotalVentas() {
-        String sql = "SELECT SUM(total) FROM ventas";
+        String sql = "SELECT SUM(total) FROM venta";
         double total = 0;
 
         try (Connection con = ConexionBD.conectar();
@@ -64,7 +64,7 @@ public class VentaDAO {
     }
 
     public double obtenerTotalGanancias() {
-        String sql = "SELECT SUM(ganancia) FROM ventas";
+        String sql = "SELECT SUM(ganancia) FROM venta";
         double total = 0;
 
         try (Connection con = ConexionBD.conectar();
@@ -85,7 +85,7 @@ public class VentaDAO {
 
     List<Object[]> listaVentas = new ArrayList<>();
 
-    String sql = "SELECT id, fecha, precio, costo, cantidad, total, ganancia FROM ventas";
+    String sql = "SELECT id, fecha, precio, costo, cantidad, total, ganancia FROM venta";
 
     try (Connection con = ConexionBD.conectar();
          Statement stmt = con.createStatement();
@@ -114,7 +114,7 @@ public class VentaDAO {
 }
     public boolean eliminarVenta(int id) {
 
-    String sql = "DELETE FROM ventas WHERE id = ?";
+    String sql = "DELETE FROM venta WHERE id = ?";
 
     try (Connection con = ConexionBD.conectar();
          PreparedStatement ps = con.prepareStatement(sql)) {
@@ -131,7 +131,7 @@ public class VentaDAO {
     
     public boolean eliminarTodas() {
 
-    String sql = "DELETE FROM ventas";
+    String sql = "DELETE FROM venta";
 
     try (Connection con = ConexionBD.conectar();
          PreparedStatement ps = con.prepareStatement(sql)) {
@@ -146,7 +146,7 @@ public class VentaDAO {
 }
     public boolean actualizarVenta(Venta venta) {
 
-    String sql = "UPDATE ventas SET precio = ?, costo = ?, cantidad = ? WHERE id = ?";
+    String sql = "UPDATE venta SET precio = ?, costo = ?, cantidad = ? WHERE id = ?";
 
     try (Connection con = ConexionBD.conectar();
          PreparedStatement ps = con.prepareStatement(sql)) {

@@ -484,9 +484,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     idSeleccionado = (int) tblVentas.getValueAt(fila, 0);
 
-    txtPrecio.setText(tblVentas.getValueAt(fila, 1).toString());
-    txtCosto.setText(tblVentas.getValueAt(fila, 2).toString());
-    txtCantidad.setText(tblVentas.getValueAt(fila, 3).toString());
+    txtPrecio.setText(tblVentas.getValueAt(fila, 2).toString());
+    txtCosto.setText(tblVentas.getValueAt(fila, 3).toString());
+    txtCantidad.setText(tblVentas.getValueAt(fila, 4).toString());
     }//GEN-LAST:event_tblVentasMouseClicked
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
